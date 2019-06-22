@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  outline: none;
+}
+
+.header {
+  height: 60px;
+  padding: 16px;
+  background-color: #3a3a3a;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.search {
+  height: 400px;
+  background: url("./assets/background.jpeg");
+  background-size: cover;
+
+  &__input {
+    margin: 0 0 48px 32px;
+
+    input {
+      border: none;
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+      font-size: 16px;
+      font-weight: 300;
+      min-width: 320px;
+    }
+  }
+}
+
+.card {
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 300;
+  min-height: 542px;
+
+  .mat-card {
+    min-height: 542px;
+  }
+
+  &__image {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 16px;
+    width: 100%;
+
+    img {
+      height: 278px;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    margin-bottom: 16px;
+  }
+
+  &__rating {
+    margin-bottom: 16px;
+
+    img {
+      width: 20px;
+      vertical-align: text-bottom;
+    }
+  }
+}
+
+.footer {
+  height: 80px;
+  padding: 16px;
+  background-color: #3a3a3a;
+  font-weight: 300;
+  color: #fff;
+}

@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Hi {{data.name}}</h1>
+
+<div mat-dialog-content>
+  <div style="font-size: 14px; margin-bottom: 24px; font-weight: 300;">
+    {{data.description}}
+  </div>
+
+  <div *ngIf="data.posterUrl">
+    <img [src]="'http://image.tmdb.org/t/p/w500' + data.posterUrl"/>
+  </div>
+
+  <div>
+    <img src="../assets/star.png"/>
+    {{data.rating}}
+  </div>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-button (click)="closeDialog()">zamknij</button>
+</div>
