@@ -1,0 +1,23 @@
+#base config
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:tcp://localhost:9092/movie/data
+    username: SA
+    password: ''
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: false
+
+
+themoviedb:
+  apiKey: '8a9a7b953a0b3439a7f779b3a5de347d'
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 200000
