@@ -31,8 +31,8 @@ public class MovieService {
 
     /**
      * Wyszukiwania filmu
-     * @param query paramert wyszukiwania
-     * @return
+     * @param query parametr wyszukiwania
+     * @return zwaraza listę wyszukiwanych filmów
      */
     public List<Movie> searchMovies(String query){
 
@@ -49,7 +49,7 @@ public class MovieService {
 
     /**
      * Pobrania popopularnych filmów
-     * @return
+     * @return zwraca listę popopularnych filmów
      */
     public List<Movie> getPopular(){
         List<Movie> popularMovies = movieMapper.mapFromDto(client.getPopular(apiKey).getResults());
@@ -59,8 +59,8 @@ public class MovieService {
 
     /**
      * Pobrania pojedynczego filmu z podaniem parametru id
-     * @param id
-     * @return
+     * @param id parametr wyszukiwania id filmu
+     * @return zwraca szczegóły wybranego filmu
      */
     public Optional<Movie> getById(Long id){
         return movieRepository.findById(id);

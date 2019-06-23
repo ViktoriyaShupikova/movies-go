@@ -17,7 +17,7 @@ public interface TheMovieDbClient {
      * Wyszukiwanie filmów
      * @param apiKey klucz do API
      * @param query paramerty wyszukiwania
-     * @return
+     * @return zwara listę filmów
      */
     @RequestMapping(method = RequestMethod.GET, value = "search/movie")
     ApiListResponse<MovieDto> searchMovies(@RequestParam("api_key") String apiKey, @RequestParam("query") String query);
@@ -25,7 +25,7 @@ public interface TheMovieDbClient {
     /**
      * Pobranie popularnych filmów
      * @param apiKey klucz do API
-     * @return
+     * @return zwraca listę popularnych filmów
      */
     @RequestMapping(method = RequestMethod.GET, value = "movie/popular")
     ApiListResponse<MovieDto> getPopular(@RequestParam("api_key") String apiKey);

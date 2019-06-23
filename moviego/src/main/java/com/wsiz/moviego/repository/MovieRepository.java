@@ -13,8 +13,8 @@ public interface MovieRepository extends JpaRepository<Movie, Long> {
 
     /**
      * Wyszukiwania filmu z bazy danych po nazwie
-     * @param name
-     * @return
+     * @param name podanie nazwy filmu
+     * @return zwraca film
      */
     List<Movie> findByNameIgnoreCaseContaining(String name);
 }

@@ -21,7 +21,7 @@ public class MovieController {
     /**
      * Wyszukiwania filmu
      * @param query paramerty wyszukiwania
-     * @return
+     * @return zwraca listę wyszukiwanych filmów
      */
     @GetMapping("/search")
     public List<Movie> searchMovies(@RequestParam("query") String query){
@@ -31,7 +31,7 @@ public class MovieController {
     /**
      * Pobrania pojedynczego filmu
      * @param id id pojedynczego filmu
-     * @return
+     * @return zwraca szczegóły filmu
      */
     @GetMapping("/search/{id}")
     public Optional<Movie> searchMovies(@PathVariable("id") Long id){
@@ -39,8 +39,8 @@ public class MovieController {
     }
 
     /**
-     * Pobrania popopularnych filmów
-     * @return
+     * Pobrania popularnych filmów
+     * @return zwraca listę popularnych filmów
      */
     @GetMapping("/popular")
     public List<Movie> getPopular(){

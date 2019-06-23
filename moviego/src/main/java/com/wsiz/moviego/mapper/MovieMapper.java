@@ -15,8 +15,8 @@ public class MovieMapper {
 
     /**
      * Lista object'ów filmów zwracanych z API
-     * @param movieDtos
-     * @return
+     * @param movieDtos listę object'ów z API
+     * @return zwraca listę object'ów zmapowanych do postaci bazodanowych
      */
     public List<Movie> mapFromDto(List<MovieDto> movieDtos){
         List<Movie> movies = new ArrayList<>();

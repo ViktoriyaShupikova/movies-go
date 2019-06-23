@@ -13,7 +13,7 @@ public class MoviegoApplication {
 
     /**
      * Medowa do uruchomienia projektu
-     * @param args
+     * @param args parametry uruchomieniowe
      */
     public static void main(String[] args) {
         SpringApplication.run(MoviegoApplication.class, args);

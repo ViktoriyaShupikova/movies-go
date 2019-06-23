@@ -1,0 +1,8 @@
+com.wsiz.moviego
+com.wsiz.moviego.client
+com.wsiz.moviego.controller
+com.wsiz.moviego.dto
+com.wsiz.moviego.mapper
+com.wsiz.moviego.model
+com.wsiz.moviego.repository
+com.wsiz.moviego.service

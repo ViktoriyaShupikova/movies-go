@@ -4,9 +4,6 @@ import lombok.Data;
 
 import java.util.List;
 
-/**
- * @param <T>
- */
 @Data
 public class ApiListResponse<T> {
 
