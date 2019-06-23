@@ -8,6 +8,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.math.BigDecimal;
 
+/**
+ * Model object'u bazy danych pojedynczego filmu
+ */
 @Entity
 @Data
 @Builder

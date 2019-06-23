@@ -6,6 +6,9 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 
+/**
+ * Object który reprezentuje odpowiedź API
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class MovieDto {

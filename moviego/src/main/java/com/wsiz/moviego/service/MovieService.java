@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Service do wyszukiwania filmów
+ */
 @Component
 public class MovieService {
 
@@ -26,6 +29,11 @@ public class MovieService {
     @Value("${themoviedb.apiKey}")
     private String apiKey;
 
+    /**
+     * Wyszukiwania filmu
+     * @param query paramert wyszukiwania
+     * @return
+     */
     public List<Movie> searchMovies(String query){
 
         List<Movie> movies = movieRepository.findByNameIgnoreCaseContaining(query);
@@ -39,12 +47,21 @@ public class MovieService {
         return movies;
     }
 
+    /**
+     * Pobrania popopularnych filmów
+     * @return
+     */
     public List<Movie> getPopular(){
         List<Movie> popularMovies = movieMapper.mapFromDto(client.getPopular(apiKey).getResults());
         movieRepository.saveAll(popularMovies);
         return popularMovies;
     }
 
+    /**
+     * Pobrania pojedynczego filmu z podaniem parametru id
+     * @param id
+     * @return
+     */
     public Optional<Movie> getById(Long id){
         return movieRepository.findById(id);
     }

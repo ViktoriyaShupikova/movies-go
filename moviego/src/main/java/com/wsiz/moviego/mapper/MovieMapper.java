@@ -7,9 +7,17 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Przetwarza object Dto w object bazodanowy
+ */
 @Component
 public class MovieMapper {
 
+    /**
+     * Lista object'ów filmów zwracanych z API
+     * @param movieDtos
+     * @return
+     */
     public List<Movie> mapFromDto(List<MovieDto> movieDtos){
         List<Movie> movies = new ArrayList<>();
 
